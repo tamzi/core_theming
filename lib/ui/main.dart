@@ -4,7 +4,7 @@ import 'package:core_theming/utils/scale.dart' as scale;
 import 'package:core_theming/utils/theme.dart';
 import 'package:flutter/material.dart';
 
-import 'file:///C:/Users/Frank/Desktop/code/flutter/themes/core_theming/lib/utils/tokens/ct_texts.dart';
+import 'package:core_theming/utils/tokens/ct_texts.dart';
 
 void main() {
   runApp(CTTheme(

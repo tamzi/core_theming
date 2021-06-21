@@ -12,7 +12,7 @@ class JFPlainFlatButton extends StatelessWidget {
     this.onPressed,
   });
 
-  /// We build our buttons calling the JFthemeData and the buttonBuilder
+  /// We build our buttons calling the CTthemeData and the buttonBuilder
   /// class.
   /// This can be repeated for all the buttons we want to build
   @override
@@ -36,7 +36,7 @@ class JFGreyFlatButton extends StatelessWidget {
     this.onPressed,
   });
 
-  /// We build our buttons calling the JFthemeData and the buttonBuilder
+  /// We build our buttons calling the CTthemeData and the buttonBuilder
   /// class.
   /// This can be repeated for all the buttons we want to build
   @override
