@@ -2,25 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:logger/logger.dart';
 
-/// These will form the Colors for the theme.
-/// The colors defined here are only available via JobFinderThemeColors.
-/// With this we will have a constant use of the Theme colors directly.
-class CTThemeColors {
-  CTThemeColors._();
+import 'atoms/ct_colour.dart';
 
-  static const Color bluish = Color.fromRGBO(89, 68, 190, 1.0);
-  static const Color darkBluish = Color.fromRGBO(49, 38, 81, 1.0);
-  static const Color black = Color.fromRGBO(19, 19, 19, 1.0);
-  static const Color reddish = Color.fromRGBO(255, 67, 67, 1.0);
-  static const Color warmRed = Color.fromRGBO(255, 119, 84, 1.0);
-  static const Color limeGreenish = Color.fromRGBO(74, 187, 0, 1.0);
-  static const Color white = Color.fromRGBO(255, 255, 255, 1.0);
-  static const Color gray = Color.fromRGBO(239, 239, 239, 1.0);
-  static const Color deepGray = Color.fromRGBO(230, 228, 230, 1.0);
-  static const Color darkGray = Color.fromRGBO(131, 130, 154, 1.0);
-  static const Color lightGray = Color.fromRGBO(246, 246, 246, 1.0);
-  static const Color buttonRed = Color.fromRGBO(255, 119, 119, 0.8);
-}
 
 const CTThemeData _default = CTThemeData(
   /// Colors
@@ -139,43 +122,43 @@ const CTThemeData _default = CTThemeData(
 
 class CTThemeData {
   /// Colors
-  final Color bluish;
-  final Color darkBluish;
-  final Color black;
-  final Color reddish;
-  final Color warmRed;
-  final Color limeGreenish;
-  final Color white;
-  final Color gray;
-  final Color deepGray;
-  final Color darkGray;
-  final Color lightGray;
+  final Color? bluish;
+  final Color? darkBluish;
+  final Color? black;
+  final Color? reddish;
+  final Color? warmRed;
+  final Color? limeGreenish;
+  final Color? white;
+  final Color? gray;
+  final Color? deepGray;
+  final Color? darkGray;
+  final Color? lightGray;
 
-  final Color buttonRed;
+  final Color? buttonRed;
 
-  final CTThemeColors colors;
+  final CTThemeColors? colors;
 
   //Text
   ///AppBar Texts
-  final TextStyle appBarHeader;
-  final TextStyle appBarDescriptionText;
+  final TextStyle? appBarHeader;
+  final TextStyle? appBarDescriptionText;
 
   ///Content Texts
-  final TextStyle header;
-  final TextStyle title;
-  final TextStyle bodyText;
-  final TextStyle descriptionText;
-  final TextStyle cardHeader;
+  final TextStyle? header;
+  final TextStyle? title;
+  final TextStyle? bodyText;
+  final TextStyle? descriptionText;
+  final TextStyle? cardHeader;
 
   /// ButtonTexts
-  final TextStyle buttonText;
-  final TextStyle buttonTextError;
-  final TextStyle buttonTextSuccess;
-  final TextStyle buttonTextWhite;
-  final TextStyle flatButtonText;
+  final TextStyle? buttonText;
+  final TextStyle? buttonTextError;
+  final TextStyle? buttonTextSuccess;
+  final TextStyle? buttonTextWhite;
+  final TextStyle? flatButtonText;
 
   //Form Texts
-  final TextStyle inputText;
+  final TextStyle? inputText;
 
   const CTThemeData({
     /// Colors
@@ -224,20 +207,20 @@ class CTThemeData {
 /// See Usage below.
 ///
 /// The values for the Theme are provided by [CTThemeData].
-/// (The properties of [CTThemeData] are the design tokens for the UI.)
+/// (The properties of [CTThemeData] are the design atoms for the UI.)
 ///
 /// The default theme values (aka fallback theme) used is considered the
 /// standard theme configuration. This can be replaced in the
 /// JobFinderThemeData constructor if needed.
 ///
-/// The fields in this class represent the design tokens in the Job Finder
+/// The fields in this class represent the design atoms in the Job Finder
 /// design system. They are referenced directly by the UI Component Widgets
 /// for the design system. This means that changing the values will change
 /// the visual styling of the UI Components.
 class CTTheme extends InheritedWidget {
-  CTTheme({this.data = _default, @required this.child}) : super(child: child);
+  CTTheme({this.data = _default, required this.child}) : super(child: child);
 
-  /// The design tokens used by UI Components to apply styling.
+  /// The design atoms used by UI Components to apply styling.
   final CTThemeData data;
   final Widget child;
 
@@ -253,7 +236,7 @@ class CTTheme extends InheritedWidget {
     ///Ideally this should not be case as we will follow strcitly
     ///the design system
     final Logger staticLogger = Logger();
-    final CTTheme currentTheme =
+    final CTTheme? currentTheme =
         context.dependOnInheritedWidgetOfExactType<CTTheme>();
     if (currentTheme == null) {
       staticLogger.w("JobFinderTheme missing. Will apply the default theme");

@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:core_theming/utils/theme.dart';
+
+import 'package:core_theming/ui/designsystem/theme.dart';
+
 
 /// This creates a default buttons that can be usd all across the app
 
-class JFButtonGrey extends StatelessWidget {
+class CTButtonGrey extends StatelessWidget {
   final String label;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
 
-  JFButtonGrey({
-    @required this.label,
+  CTButtonGrey({
+    required this.label,
     this.onPressed,
   });
 
-  /// We build our buttons calling the CTthemeData and the buttonBuilder
+  /// We build our buttons calling the CTThemeData and the buttonBuilder
   /// class.
   /// This can be repeated for all the buttons we want to build
   @override
@@ -29,12 +31,12 @@ class JFButtonGrey extends StatelessWidget {
   }
 }
 
-class JFButtonBlack extends StatelessWidget {
+class CTButtonBlack extends StatelessWidget {
   final String label;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
 
-  JFButtonBlack({
-    @required this.label,
+  CTButtonBlack({
+    required this.label,
     this.onPressed,
   });
 
@@ -54,12 +56,12 @@ class JFButtonBlack extends StatelessWidget {
   }
 }
 
-class JFButtonRed extends StatelessWidget {
+class CTButtonRed extends StatelessWidget {
   final String label;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
 
-  JFButtonRed({
-    @required this.label,
+  CTButtonRed({
+    required this.label,
     this.onPressed,
   });
 
@@ -82,21 +84,21 @@ class JFButtonRed extends StatelessWidget {
 /// This is a button builder that will be used to build the
 /// various properties we need for the buttons that will be created.
 class _ButtonBuilder {
-  final Color color;
-  final Color textColor;
-  final Color splashColor;
+  final Color? color;
+  final Color? textColor;
+  final Color? splashColor;
   final double elevation;
   final String label;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final double borderRadius;
   final double buttonWidth;
 
   _ButtonBuilder(
-      {@required this.color,
-      @required this.textColor,
-      @required this.splashColor,
-      @required this.label,
-      @required this.onPressed,
+      {required this.color,
+      required this.textColor,
+      required this.splashColor,
+      required this.label,
+      required this.onPressed,
       this.buttonWidth = double.infinity,
       this.elevation = 3.0,
       this.borderRadius = 13.0});

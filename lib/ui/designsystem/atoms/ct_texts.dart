@@ -1,5 +1,7 @@
-import 'package:core_theming/utils/theme.dart';
+
 import 'package:flutter/material.dart';
+
+import 'package:core_theming/ui/designsystem/theme.dart';
 
 abstract class _CTtext extends StatelessWidget {
   final String text;
@@ -7,10 +9,10 @@ abstract class _CTtext extends StatelessWidget {
   final TextOverflow textOverflow;
 
   const _CTtext({
-    Key key,
-    @required this.text,
-    @required this.textAlign,
-    @required this.textOverflow,
+    Key? key,
+    required this.text,
+    required this.textAlign,
+    required this.textOverflow,
   })  : assert(text != null, "A non-null String must be provided"),
         super(key: key);
 }
@@ -21,7 +23,7 @@ abstract class _CTtext extends StatelessWidget {
 /// APpBarHEader
 class CTAppBarHeader extends _CTtext {
   const CTAppBarHeader(String text,
-      {Key key,
+      {Key? key,
       TextAlign textAlign = TextAlign.start,
       TextOverflow textOverflow = TextOverflow.visible})
       : super(text: text, textAlign: textAlign, textOverflow: textOverflow);
@@ -40,7 +42,7 @@ class CTAppBarHeader extends _CTtext {
 /// APpBarDescription Text
 class CTAppBarDescription extends _CTtext {
   const CTAppBarDescription(String text,
-      {Key key,
+      {Key? key,
       TextAlign textAlign = TextAlign.start,
       TextOverflow textOverflow = TextOverflow.visible})
       : super(text: text, textAlign: textAlign, textOverflow: textOverflow);
@@ -61,7 +63,7 @@ class CTAppBarDescription extends _CTtext {
 /// These are used in the various text items
 class CTHeader extends _CTtext {
   const CTHeader(String text,
-      {Key key,
+      {Key? key,
       TextAlign textAlign = TextAlign.start,
       TextOverflow textOverflow = TextOverflow.visible})
       : super(text: text, textAlign: textAlign, textOverflow: textOverflow);
@@ -82,7 +84,7 @@ class CTHeader extends _CTtext {
 /// these will be placed in the various segments
 class CTTitle extends _CTtext {
   const CTTitle(String text,
-      {Key key,
+      {Key? key,
       TextAlign textAlign = TextAlign.start,
       TextOverflow textOverflow = TextOverflow.visible})
       : super(text: text, textAlign: textAlign, textOverflow: textOverflow);
@@ -102,7 +104,7 @@ class CTTitle extends _CTtext {
 /// These are used in the various card element parts
 class CTDescriptionText extends _CTtext {
   const CTDescriptionText(String text,
-      {Key key,
+      {Key? key,
       TextAlign textAlign = TextAlign.start,
       TextOverflow textOverflow = TextOverflow.visible})
       : super(text: text, textAlign: textAlign, textOverflow: textOverflow);
@@ -122,7 +124,7 @@ class CTDescriptionText extends _CTtext {
 /// This is the body text that will exist in the project
 class CTBodyText extends _CTtext {
   const CTBodyText(String text,
-      {Key key,
+      {Key? key,
       TextAlign textAlign = TextAlign.start,
       TextOverflow textOverflow = TextOverflow.visible})
       : super(text: text, textAlign: textAlign, textOverflow: textOverflow);
@@ -144,7 +146,7 @@ class CTBodyText extends _CTtext {
 // Card Header
 class CTCardHeader extends _CTtext {
   const CTCardHeader(String text,
-      {Key key,
+      {Key? key,
       TextAlign textAlign = TextAlign.start,
       TextOverflow textOverflow = TextOverflow.visible})
       : super(text: text, textAlign: textAlign, textOverflow: textOverflow);
@@ -167,7 +169,7 @@ class CTCardHeader extends _CTtext {
 /// This will be of the color black.
 class CTBtnText extends _CTtext {
   const CTBtnText(String text,
-      {Key key,
+      {Key? key,
       TextAlign textAlign = TextAlign.start,
       TextOverflow textOverflow = TextOverflow.visible})
       : super(text: text, textAlign: textAlign, textOverflow: textOverflow);
@@ -186,7 +188,7 @@ class CTBtnText extends _CTtext {
 // Flat Button Text
 class CTFlatBtnText extends _CTtext {
   const CTFlatBtnText(String text,
-      {Key key,
+      {Key? key,
       TextAlign textAlign = TextAlign.start,
       TextOverflow textOverflow = TextOverflow.visible})
       : super(text: text, textAlign: textAlign, textOverflow: textOverflow);
@@ -205,7 +207,7 @@ class CTFlatBtnText extends _CTtext {
 //White Button Text
 class CTBtnTextWhite extends _CTtext {
   const CTBtnTextWhite(String text,
-      {Key key,
+      {Key? key,
       TextAlign textAlign = TextAlign.start,
       TextOverflow textOverflow = TextOverflow.visible})
       : super(text: text, textAlign: textAlign, textOverflow: textOverflow);
@@ -224,7 +226,7 @@ class CTBtnTextWhite extends _CTtext {
 // Error Button Text
 class CTBtnTextError extends _CTtext {
   const CTBtnTextError(String text,
-      {Key key,
+      {Key? key,
       TextAlign textAlign = TextAlign.start,
       TextOverflow textOverflow = TextOverflow.visible})
       : super(text: text, textAlign: textAlign, textOverflow: textOverflow);
@@ -243,7 +245,7 @@ class CTBtnTextError extends _CTtext {
 // Success Button Text
 class CTBtnTextSuccess extends _CTtext {
   const CTBtnTextSuccess(String text,
-      {Key key,
+      {Key? key,
       TextAlign textAlign = TextAlign.start,
       TextOverflow textOverflow = TextOverflow.visible})
       : super(text: text, textAlign: textAlign, textOverflow: textOverflow);
