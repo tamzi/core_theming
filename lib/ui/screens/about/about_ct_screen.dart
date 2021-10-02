@@ -1,9 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:core_theming/ui/designsystem/utils/scale.dart' as scale;
-
 import 'package:core_theming/ui/designsystem/theme.dart';
-
 import 'package:core_theming/ui/designsystem/atoms/ct_colour.dart';
 import 'package:core_theming/ui/designsystem/atoms/ct_texts.dart';
 import 'package:core_theming/ui/designsystem/components/ct_buttons.dart';
@@ -13,13 +10,12 @@ import 'package:core_theming/ui/main.dart';
 void main() {
   runApp(CTTheme(
       child: MaterialApp(
-        title: "about Core ThemeComponent gallery viewer Application",
-        home: AboutCoreTheming(),
-        routes: {
-          '/home': (context) => GalleryRoot(),
-
-        },
-      )));
+    title: "about Core ThemeComponent gallery viewer Application",
+    home: AboutCoreTheming(),
+    routes: {
+      '/home': (context) => GalleryRoot(),
+    },
+  )));
 }
 
 class AboutCoreTheming extends StatelessWidget {
@@ -44,7 +40,7 @@ class AboutCoreTheming extends StatelessWidget {
                   // Content Texts
                   CTDescriptionText(
                     "Core theming is a project that kicks starts your design "
-                        "layouts in flutter",
+                    "layouts in flutter",
                   ),
                   Divider(),
                   Container(
@@ -65,4 +61,3 @@ class AboutCoreTheming extends StatelessWidget {
         ));
   }
 }
-
