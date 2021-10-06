@@ -9,6 +9,8 @@ import 'package:core_theming/ui/designsystem/atoms/ct_texts.dart';
 import 'package:core_theming/ui/designsystem/components/ct_buttons.dart';
 import 'package:core_theming/ui/designsystem/components/ct_flat_buttons.dart';
 
+import 'designsystem/components/tbtn.dart';
+
 void main() {
   runApp(CTTheme(
       child: MaterialApp(
@@ -156,6 +158,15 @@ class ButtonsGallery extends StatelessWidget {
                       print('You tapped on ButtonRed with text Apply for job');
                     },
                   ),
+                ),
+                Divider(),
+                CTButtonDefault(
+                  label: 'Elevated Button Default',
+                  onPressed: () {
+                    print('You tapped on CTButtonDefault');
+                  },
+
+
                 ),
                 Divider(),
                 Container(
