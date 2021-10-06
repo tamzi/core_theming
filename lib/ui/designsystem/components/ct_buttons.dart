@@ -104,6 +104,7 @@ class _ButtonBuilder {
 
   RaisedButton build() {
     return RaisedButton(
+
         onPressed: this.onPressed == null ? null : this.onPressed,
         color: this.color,
         textColor: this.textColor,
