@@ -4,11 +4,11 @@ import 'package:flutter/widgets.dart';
 import 'package:core_theming/ui/designsystem/theme.dart';
 
 /// This creates a default buttons that can be usd all across the app
-class CTPlainFlatButton extends StatelessWidget {
+class CTPlainTextButton extends StatelessWidget {
   final String label;
   final VoidCallback? onPressed;
 
-  const CTPlainFlatButton({
+  const CTPlainTextButton({
     Key? key,
     required this.label,
     this.onPressed,
@@ -29,11 +29,11 @@ class CTPlainFlatButton extends StatelessWidget {
   }
 }
 
-class CTWarningFlatButton extends StatelessWidget {
+class CTWarningTextButton extends StatelessWidget {
   final String label;
   final VoidCallback? onPressed;
 
-  const CTWarningFlatButton({
+  const CTWarningTextButton({
     Key? key,
     required this.label,
     this.onPressed,
@@ -54,11 +54,11 @@ class CTWarningFlatButton extends StatelessWidget {
   }
 }
 
-class CSuccessFlatButton extends StatelessWidget {
+class CSuccessTextButton extends StatelessWidget {
   final String label;
   final VoidCallback? onPressed;
 
-  const CSuccessFlatButton({
+  const CSuccessTextButton({
     Key? key,
     required this.label,
     this.onPressed,

@@ -5,7 +5,7 @@
   <h3 align="center">Core Theming App</h3>
 
   <p align="center">
-    A design barebones starter app based on my talk on design systems.
+    A design barebones starter app based on my talks on design systems for mobile application development.
     <br>
      <img src="https://img.shields.io/badge/dart-coded%20in%20dart-blue" alt="built with dart">
     <br>
@@ -47,8 +47,6 @@ coming soon
 ## Technical
 ## Permissions
 
-1. Internet
-2. Browse phone
 
 <hr>
 

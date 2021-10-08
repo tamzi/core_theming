@@ -6,6 +6,43 @@ import 'package:flutter/widgets.dart';
 
 import 'package:core_theming/ui/designsystem/theme.dart';
 
+/// This is a button builder that will be used to build the
+/// various properties we need for the buttons that will be created.
+/// The
+class _NewButtonBuilder {
+  final VoidCallback? onPressed;
+  final String label;
+  final Color? btnPrimaryColor;
+  final Color? btnTextColor;
+  final OutlinedBorder btnShape;
+
+  /* final Color? color;*/
+
+  _NewButtonBuilder({
+    required this.onPressed,
+    required this.label,
+    required this.btnPrimaryColor,
+    required this.btnTextColor,
+    required this.btnShape,
+
+
+  });
+
+  ElevatedButton build(){
+    return ElevatedButton(
+      child: CTBtnText(this.label),
+      onPressed: this.onPressed == null ? null : this.onPressed,
+      style: ElevatedButton.styleFrom(
+        primary: this.btnPrimaryColor,
+        onPrimary: this.btnTextColor,
+        elevation: 5,
+        shape: this.btnShape,
+      ),
+
+    );
+  }
+}
+
 
 class CTButtonDefault extends StatelessWidget {
   final String label;
@@ -25,8 +62,9 @@ class CTButtonDefault extends StatelessWidget {
     return _NewButtonBuilder(
       label: this.label,
       btnPrimaryColor: themeData.deepGray,
+      btnTextColor: themeData.black,
       btnShape: RoundedRectangleBorder(
-        borderRadius: new BorderRadius.circular(20.0),
+        borderRadius: new BorderRadius.circular(10.0),
       ),
       onPressed: this.onPressed,
     ).build();
@@ -40,39 +78,6 @@ class CTButtonDefault extends StatelessWidget {
 
 
 
-
-
-class _NewButtonBuilder {
-  final VoidCallback? onPressed;
-  final String label;
-  final Color? btnPrimaryColor;
-  final OutlinedBorder btnShape;
-
- /* final Color? color;*/
-
-  _NewButtonBuilder({
-    required this.onPressed,
-    required this.label,
-    required this.btnPrimaryColor,
-    required this.btnShape,
-
-
-});
-
-ElevatedButton build(){
-    return ElevatedButton(
-      child: CTBtnTextWhite(this.label),
-      onPressed: this.onPressed == null ? null : this.onPressed,
-      style: ElevatedButton.styleFrom(
-            primary: this.btnPrimaryColor,
-            onPrimary: Colors.white,
-            elevation: 10,
-        shape: this.btnShape,
-        ),
-
-    );
-}
-}
 
 /*
 You can also increase size by wrapping the button

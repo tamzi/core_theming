@@ -73,18 +73,20 @@ const CTThemeData _default = CTThemeData(
       color: CTThemeColors.black),
 
   ///TextButtons
+  ///The buttonText will be the default button text for all the
+  ///buttons in the application.
   buttonText: TextStyle(
-      fontSize: 13.0,
+      fontSize: 17.0,
       height: 1.2,
       letterSpacing: -0.3,
-      fontFamily: 'Gilroy',
+      fontFamily: 'DMSans',
       fontWeight: FontWeight.w300,
       color: CTThemeColors.black),
   flatButtonText: TextStyle(
       fontSize: 15.0,
       height: 1.2,
       letterSpacing: -0.3,
-      fontFamily: 'Gilroy',
+      fontFamily: 'DMSans',
       fontWeight: FontWeight.w500,
       color: CTThemeColors.black),
   buttonTextWhite: TextStyle(

@@ -1,4 +1,5 @@
 
+import 'package:core_theming/ui/screens/about/about_ct_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:core_theming/ui/designsystem/utils/scale.dart' as scale;
 
@@ -21,6 +22,7 @@ void main() {
       '/buttons': (context) => ButtonsGallery(),
       '/listTiles': (context) => ListTilesGallery(),
       '/Cards': (context) => CardGallery(),
+      '/about':(context) => AboutCoreTheming(),
     },
   )));
 }
@@ -64,6 +66,14 @@ class GalleryRoot extends StatelessWidget {
                 },
               ),
               Divider(),
+              CTButtonDefault(
+                label: 'About',
+                onPressed: () {
+                  Navigator.pushNamed(context, '/about');
+                  },
+              ),
+              Divider(),
+
             ],
           ),
         ));
@@ -171,7 +181,7 @@ class ButtonsGallery extends StatelessWidget {
                 Divider(),
                 Container(
                   width: double.infinity,
-                  child: CTPlainFlatButton(
+                  child: CTPlainTextButton(
                     label: 'FlatButton',
                     onPressed: () {
                       print('You tapped a FlatButton with text FlatButton');
