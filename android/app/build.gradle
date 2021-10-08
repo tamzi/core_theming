@@ -1,4 +1,4 @@
-def localProperties = new Properties()
+def localProperties = Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
     localPropertiesFile.withReader('UTF-8') { reader ->
@@ -8,7 +8,7 @@ if (localPropertiesFile.exists()) {
 
 def flutterRoot = localProperties.getProperty('flutter.sdk')
 if (flutterRoot == null) {
-    throw new FileNotFoundException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+    throw FileNotFoundException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
 }
 
 def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
@@ -27,6 +27,9 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
     compileSdkVersion 31
+    android.ndkVersion "22.1.7171670"
+    ndkPath "/android/sdk/ndk/22.1.7171670"
+
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -60,4 +63,5 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    classpath "com.android.tools.build:gradle:4.0.1"
 }

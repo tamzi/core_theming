@@ -30,7 +30,7 @@
 
 <hr>
 ## About the app
-A design barebones starter app based on my talk on design systems
+A design systems barebones starter app based on my talk on design systems
 
 
 <hr>
