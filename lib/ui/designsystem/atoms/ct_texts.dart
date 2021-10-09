@@ -1,4 +1,5 @@
 
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 import 'package:core_theming/ui/designsystem/theme.dart';
@@ -112,6 +113,24 @@ class CTDescriptionText extends _CTtext {
   @override
   Widget build(BuildContext context) {
     return Text(
+      text,
+      textAlign: textAlign,
+      overflow: textOverflow,
+      style: CTTheme.of(context).descriptionText,
+    );
+  }
+}
+
+class CTParagraphText extends _CTtext {
+  const CTParagraphText(String text,
+      {Key? key,
+      TextAlign textAlign = TextAlign.start,
+      TextOverflow textOverflow = TextOverflow.visible})
+      : super(text: text, textAlign: textAlign, textOverflow: textOverflow);
+
+  @override
+  Widget build(BuildContext context) {
+    return AutoSizeText(
       text,
       textAlign: textAlign,
       overflow: textOverflow,
