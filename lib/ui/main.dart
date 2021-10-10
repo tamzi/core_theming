@@ -2,6 +2,7 @@
 import 'package:core_theming/ui/screens/about/about_ct_screen.dart';
 import 'package:core_theming/ui/screens/components/buttons_gallery.dart';
 import 'package:core_theming/ui/screens/components/card_gallery.dart';
+import 'package:core_theming/ui/screens/components/flat_buttons_gallery.dart';
 import 'package:core_theming/ui/screens/components/list_tiles_gallery.dart';
 import 'package:core_theming/ui/screens/components/text_gallery.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,7 @@ void main() {
     routes: {
       '/texts': (context) => TextsGallery(),
       '/buttons': (context) => ButtonsGallery(),
+      '/textButtons': (context) => TextButtonsGallery(),
       '/listTiles': (context) => ListTilesGallery(),
       '/Cards': (context) => CardGallery(),
       '/about':(context) => AboutCoreTheming(),
@@ -28,6 +30,8 @@ void main() {
 }
 
 class GalleryRoot extends StatelessWidget {
+  final double edgeInsets10 = scale.value(10.0);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +45,7 @@ class GalleryRoot extends StatelessWidget {
           backgroundColor: CTThemeColors.deepGray,
           ),
         body: Padding(
-          padding: EdgeInsets.all(scale.value(10.0)),
+          padding: EdgeInsets.all(edgeInsets10),
           child: ListView(
             children: <Widget>[
               /// Texts
@@ -54,8 +58,6 @@ class GalleryRoot extends StatelessWidget {
                   Navigator.pushNamed(context, '/texts');
                 },
               ),
-              Divider(),
-
               /// Buttons
               ListTile(
                 title: CTTitle("Buttons"),
@@ -63,6 +65,14 @@ class GalleryRoot extends StatelessWidget {
                     "This will show a list of all the button widgets."),
                 onTap: () {
                   Navigator.pushNamed(context, "/buttons");
+                },
+              ),
+              ListTile(
+                title: CTTitle("Text Buttons"),
+                subtitle: CTDescriptionText(
+                    "This shows a list of all the Text button widgets."),
+                onTap: () {
+                  Navigator.pushNamed(context, "/textButtons");
                 },
               ),
               Divider(),

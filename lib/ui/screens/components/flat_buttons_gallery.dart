@@ -7,7 +7,7 @@ import 'package:core_theming/ui/designsystem/utils/scale.dart' as scale;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ButtonsGallery extends StatelessWidget {
+class TextButtonsGallery extends StatelessWidget {
   final double edgeInsets20 = scale.value(20.0);
 
   @override
@@ -28,45 +28,28 @@ class ButtonsGallery extends StatelessWidget {
               child: Column(children: <Widget>[
                 Container(
                   width: double.infinity,
-                  child: CTButtonBlack(
-                    label: 'Apply Now',
-                    onPressed: () {
-                      print('You tapped on ButtonBlack with text Apply Now');
-                    },
-                  ),
-                ),
-                Divider(),
-                Container(
-                  width: double.infinity,
-                  child: CTButtonGrey(
-                    label: 'Delivered',
-                    onPressed: () {
-                      print('You tapped on ButtonGrey with text Delivered');
-                    },
-                  ),
-                ),
-                Divider(),
-                Container(
-                  width: double.infinity,
-                  child: CTButtonRed(
-                    label: 'Apply for job',
-                    onPressed: () {
-                      print('You tapped on ButtonRed with text Apply for job');
-                    },
-                  ),
-                ),
-                Divider(),
-                CTButtonDefault(
-                  label: 'Elevated Button Default',
-                  onPressed: () {
-                    print('You tapped on CTButtonDefault');
-                  },
-                ),
-                Divider(),
-                Container(
-                  width: double.infinity,
                   child: CTPlainTextButton(
-                    label: 'FlatButton',
+                    label: 'Normal Text Button',
+                    onPressed: () {
+                      print('You tapped a FlatButton with text FlatButton');
+                    },
+                  ),
+                ),
+                Divider(),
+                Container(
+                  width: double.infinity,
+                  child: CTWarningTextButton(
+                    label: 'Warning Text Button',
+                    onPressed: () {
+                      print('You tapped a FlatButton with text FlatButton');
+                    },
+                  ),
+                ),
+                Divider(),
+                Container(
+                  width: double.infinity,
+                  child: CSuccessTextButton(
+                    label: 'Success Text Button',
                     onPressed: () {
                       print('You tapped a FlatButton with text FlatButton');
                     },
