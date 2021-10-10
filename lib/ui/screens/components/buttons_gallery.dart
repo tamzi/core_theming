@@ -26,49 +26,89 @@ class ButtonsGallery extends StatelessWidget {
             padding: EdgeInsets.all(edgeInsets20),
             child: SingleChildScrollView(
               child: Column(children: <Widget>[
-                Container(
-                  width: double.infinity,
-                  child: CTButtonBlack(
-                    label: 'Apply Now',
-                    onPressed: () {
-                      print('You tapped on ButtonBlack with text Apply Now');
-                    },
-                  ),
-                ),
-                Divider(),
-                Container(
-                  width: double.infinity,
-                  child: CTButtonGrey(
-                    label: 'Delivered',
-                    onPressed: () {
-                      print('You tapped on ButtonGrey with text Delivered');
-                    },
-                  ),
-                ),
-                Divider(),
-                Container(
-                  width: double.infinity,
-                  child: CTButtonRed(
-                    label: 'Apply for job',
-                    onPressed: () {
-                      print('You tapped on ButtonRed with text Apply for job');
-                    },
-                  ),
-                ),
-                Divider(),
                 CTButtonDefault(
-                  label: 'Elevated Button Default',
+                  label: 'Default Button',
                   onPressed: () {
-                    print('You tapped on CTButtonDefault');
+                    print('You tapped on Default Button');
                   },
                 ),
                 Divider(),
                 Container(
                   width: double.infinity,
-                  child: CTPlainTextButton(
-                    label: 'FlatButton',
+                  child: CTButtonBlackWhite(
+                    label: 'Button BlackWhite',
                     onPressed: () {
-                      print('You tapped a FlatButton with text FlatButton');
+                      print('You tapped on Button BlackWhite');
+                    },
+                  ),
+                ),
+                Divider(),
+                Container(
+                  width: double.infinity,
+                  child: CTButtonDefault(
+                    label: 'DefaultButton in container',
+                    onPressed: () {
+                      print('You tapped on DefaultButton in container');
+                    },
+                  ),
+                ),
+                Divider(),
+                Container(
+                  width: double.infinity,
+                  child: CTButtonWarmRedWhite(
+                    label: 'Button WarmRedWhite',
+                    onPressed: () {
+                      print('You tapped on a WarmRedWhite Button');
+                    },
+                  ),
+                ),
+                Divider(),
+                Container(
+                  width: double.infinity,
+                  child: CTButtonWarmRedBlack(
+                    label: 'Button WarmRedBlack',
+                    onPressed: () {
+                      print('You tapped on WarmRedBlack button');
+                    },
+                  ),
+                ),
+                Divider(),
+                Container(
+                  width: double.infinity,
+                  child: CTButtonRedWhite(
+                    label: 'Button RedWhite',
+                    onPressed: () {
+                      print('You tapped a RedWhite');
+                    },
+                  ),
+                ),
+                Divider(),
+                Container(
+                  width: double.infinity,
+                  child: CTButtonRedBlack (
+                    label: 'Button RedBlack',
+                    onPressed: () {
+                      print('You tapped a RedBlack button');
+                    },
+                  ),
+                ),
+                Divider(),
+                Container(
+                  width: double.infinity,
+                  child: CTButtonLimeGreenBlack (
+                    label: 'Button LimeGreenBlack',
+                    onPressed: () {
+                      print('You tapped a LimeGreenBlack button');
+                    },
+                  ),
+                ),
+                Divider(),
+                Container(
+                  width: double.infinity,
+                  child: CTButtonLimeGreenWhite (
+                    label: 'Button LimeGreenWhite',
+                    onPressed: () {
+                      print('You tapped a Button LimeGreenWhite button');
                     },
                   ),
                 ),
