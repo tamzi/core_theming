@@ -8,6 +8,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ButtonsGallery extends StatelessWidget {
+  final double edgeInsets20 = scale.value(20.0);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +23,7 @@ class ButtonsGallery extends StatelessWidget {
         ),
         body: SafeArea(
           child: Container(
-            padding: EdgeInsets.all(scale.value(20.0)),
+            padding: EdgeInsets.all(edgeInsets20),
             child: SingleChildScrollView(
               child: Column(children: <Widget>[
                 Container(

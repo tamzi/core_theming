@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 
 //List Gallery Widgets
 class CardGallery extends StatelessWidget {
+  final double edgeInsets20 = scale.value(20.0);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +20,7 @@ class CardGallery extends StatelessWidget {
         ),
         body: SafeArea(
           child: Container(
-            padding: EdgeInsets.all(scale.value(20.0)),
+            padding: EdgeInsets.all(edgeInsets20),
             child: SingleChildScrollView(
               child: Column(children: <Widget>[]),
             ),
