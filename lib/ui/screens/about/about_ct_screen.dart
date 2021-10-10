@@ -1,4 +1,4 @@
-import 'package:core_theming/ui/designsystem/components/tbtn.dart';
+import 'package:core_theming/ui/designsystem/components/ct_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:core_theming/ui/designsystem/utils/scale.dart' as scale;
 import 'package:core_theming/ui/designsystem/theme.dart';
