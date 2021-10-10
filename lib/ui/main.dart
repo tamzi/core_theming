@@ -80,8 +80,3 @@ class GalleryRoot extends StatelessWidget {
 
 /// Start of Gallery element Classes
 /// Text Widgets Gallery
-
-
-
-
-
