@@ -1,14 +1,14 @@
 
 import 'package:core_theming/ui/screens/about/about_ct_screen.dart';
+import 'package:core_theming/ui/screens/components/buttons_gallery.dart';
+import 'package:core_theming/ui/screens/components/card_gallery.dart';
+import 'package:core_theming/ui/screens/components/list_tiles_gallery.dart';
+import 'package:core_theming/ui/screens/components/text_gallery.dart';
 import 'package:flutter/material.dart';
 import 'package:core_theming/ui/designsystem/utils/scale.dart' as scale;
-
 import 'package:core_theming/ui/designsystem/theme.dart';
-
 import 'package:core_theming/ui/designsystem/atoms/ct_colour.dart';
 import 'package:core_theming/ui/designsystem/atoms/ct_texts.dart';
-import 'package:core_theming/ui/designsystem/components/ct_buttons.dart';
-import 'package:core_theming/ui/designsystem/components/ct_flat_buttons.dart';
 
 import 'designsystem/components/tbtn.dart';
 
@@ -39,9 +39,9 @@ class GalleryRoot extends StatelessWidget {
           centerTitle: true,
           elevation: 7,
           backgroundColor: CTThemeColors.deepGray,
-        ),
+          ),
         body: Padding(
-          padding: EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(scale.value(10.0)),
           child: ListView(
             children: <Widget>[
               /// Texts
@@ -70,10 +70,8 @@ class GalleryRoot extends StatelessWidget {
                 label: 'About',
                 onPressed: () {
                   Navigator.pushNamed(context, '/about');
-                  },
+                },
               ),
-              Divider(),
-
             ],
           ),
         ));
@@ -82,162 +80,8 @@ class GalleryRoot extends StatelessWidget {
 
 /// Start of Gallery element Classes
 /// Text Widgets Gallery
-class TextsGallery extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: CTThemeColors.lightGray,
-        appBar: AppBar(
-          title: CTAppBarHeader('Text Items'),
-          centerTitle: true,
-          elevation: 3,
-          backgroundColor: CTThemeColors.deepGray,
-        ),
-        body: SafeArea(
-          child: Container(
-            padding: EdgeInsets.all(scale.value(20.0)),
-            child: SingleChildScrollView(
-              child: Column(
-                children: <Widget>[
-                  // Content Texts
-                  CTHeader('This is a Header'),
-                  Divider(),
-                  CTTitle('This is a Title'),
-                  Divider(),
-                  CTDescriptionText(
-                    "This is a description.",
-                  ),
-                  Divider(),
-                  CTBodyText('This is a body Text'),
-                  Divider(),
-                  // AppBar Texts
-                  CTAppBarHeader('This is an AppBar Header'),
-                  Divider(),
-                  CTAppBarDescription('This is an AppBar Description'),
-                  Divider(),
-                ],
-              ),
-            ),
-          ),
-        ));
-  }
-}
-
-//Button Widgets
-class ButtonsGallery extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.white,
-        appBar: AppBar(
-          title: CTAppBarHeader('Buttons'),
-          centerTitle: true,
-          elevation: 3,
-          backgroundColor: CTThemeColors.deepGray,
-        ),
-        body: SafeArea(
-          child: Container(
-            padding: EdgeInsets.all(scale.value(20.0)),
-            child: SingleChildScrollView(
-              child: Column(children: <Widget>[
-                Container(
-                  width: double.infinity,
-                  child: CTButtonBlack(
-                    label: 'Apply Now',
-                    onPressed: () {
-                      print('You tapped on ButtonBlack with text Apply Now');
-                    },
-                  ),
-                ),
-                Divider(),
-                Container(
-                  width: double.infinity,
-                  child: CTButtonGrey(
-                    label: 'Delivered',
-                    onPressed: () {
-                      print('You tapped on ButtonGrey with text Delivered');
-                    },
-                  ),
-                ),
-                Divider(),
-                Container(
-                  width: double.infinity,
-                  child: CTButtonRed(
-                    label: 'Apply for job',
-                    onPressed: () {
-                      print('You tapped on ButtonRed with text Apply for job');
-                    },
-                  ),
-                ),
-                Divider(),
-                CTButtonDefault(
-                  label: 'Elevated Button Default',
-                  onPressed: () {
-                    print('You tapped on CTButtonDefault');
-                  },
 
 
-                ),
-                Divider(),
-                Container(
-                  width: double.infinity,
-                  child: CTPlainTextButton(
-                    label: 'FlatButton',
-                    onPressed: () {
-                      print('You tapped a FlatButton with text FlatButton');
-                    },
-                  ),
-                ),
-                Divider(),
-              ]),
-            ),
-          ),
-        ));
-  }
-}
 
-// List Gallery Widgets
-class ListTilesGallery extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.white,
-        appBar: AppBar(
-          title: CTAppBarHeader('List Tiles'),
-          centerTitle: true,
-          elevation: 3,
-          backgroundColor: CTThemeColors.deepGray,
-        ),
-        body: SafeArea(
-          child: Container(
-            padding: EdgeInsets.all(scale.value(20.0)),
-            child: SingleChildScrollView(
-              child: Column(children: <Widget>[]),
-            ),
-          ),
-        ));
-  }
-}
 
-//List Gallery Widgets
-class CardGallery extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.white,
-        appBar: AppBar(
-          title: CTAppBarHeader('info Cards'),
-          centerTitle: true,
-          elevation: 3,
-          backgroundColor: CTThemeColors.deepGray,
-        ),
-        body: SafeArea(
-          child: Container(
-            padding: EdgeInsets.all(scale.value(20.0)),
-            child: SingleChildScrollView(
-              child: Column(children: <Widget>[]),
-            ),
-          ),
-        ));
-  }
-}
+
