@@ -1,8 +1,6 @@
 import 'package:core_theming/ui/designsystem/atoms/ct_colour.dart';
 import 'package:core_theming/ui/designsystem/atoms/ct_texts.dart';
-import 'package:core_theming/ui/designsystem/components/ct_buttons.dart';
 import 'package:core_theming/ui/designsystem/components/ct_text_buttons.dart';
-import 'package:core_theming/ui/designsystem/components/tbtn.dart';
 import 'package:core_theming/ui/designsystem/utils/scale.dart' as scale;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

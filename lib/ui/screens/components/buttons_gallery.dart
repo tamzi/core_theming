@@ -1,14 +1,14 @@
 import 'package:core_theming/ui/designsystem/atoms/ct_colour.dart';
 import 'package:core_theming/ui/designsystem/atoms/ct_texts.dart';
 import 'package:core_theming/ui/designsystem/components/ct_buttons.dart';
-import 'package:core_theming/ui/designsystem/components/ct_text_buttons.dart';
-import 'package:core_theming/ui/designsystem/components/tbtn.dart';
 import 'package:core_theming/ui/designsystem/utils/scale.dart' as scale;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ButtonsGallery extends StatelessWidget {
   final double edgeInsets20 = scale.value(20.0);
+  final double measured300 = scale.value(300.0);
+  final double measured200 = scale.value(200.0);
 
   @override
   Widget build(BuildContext context) {
@@ -113,6 +113,19 @@ class ButtonsGallery extends StatelessWidget {
                   ),
                 ),
                 Divider(),
+              ConstrainedBox(
+                constraints: BoxConstraints.tightFor(
+                    width: measured300, height: measured200
+                ),
+                child: CTButtonDefault(
+                  label: 'default button stretched to 300 x 200',
+                  onPressed: () {
+                    print('You tapped on default button stretched to 300 x 200');
+                  },
+                ),
+            ),
+                Divider(),
+
               ]),
             ),
           ),

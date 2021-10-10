@@ -10,8 +10,8 @@ import 'package:core_theming/ui/designsystem/utils/scale.dart' as scale;
 import 'package:core_theming/ui/designsystem/theme.dart';
 import 'package:core_theming/ui/designsystem/atoms/ct_colour.dart';
 import 'package:core_theming/ui/designsystem/atoms/ct_texts.dart';
+import 'package:core_theming/ui/designsystem/components/ct_buttons.dart';
 
-import 'designsystem/components/tbtn.dart';
 
 void main() {
   runApp(CTTheme(
