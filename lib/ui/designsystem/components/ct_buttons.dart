@@ -8,7 +8,7 @@ import 'package:core_theming/ui/designsystem/theme.dart';
 /// This is a button builder that will be used to build the
 /// various properties we need for the buttons that will be created.
 /// The
-class _NewButtonBuilder {
+class _ButtonBuilder {
   final double edgeInset17 = scale.value(17.0);
   final VoidCallback? onPressed;
   final String label;
@@ -18,7 +18,7 @@ class _NewButtonBuilder {
 
   /* final Color? color;*/
 
-  _NewButtonBuilder({
+  _ButtonBuilder({
     required this.onPressed,
     required this.label,
     required this.btnPrimaryColor,
@@ -61,7 +61,7 @@ class CTButtonDefault extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeData = CTTheme.of(context);
-    return _NewButtonBuilder(
+    return _ButtonBuilder(
       label: this.label,
       btnPrimaryColor: themeData.deepGray,
       btnTextColor: themeData.black,
@@ -88,7 +88,7 @@ class CTButtonRedWhite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeData = CTTheme.of(context);
-    return _NewButtonBuilder(
+    return _ButtonBuilder(
       label: this.label,
       btnPrimaryColor: themeData.reddish,
       btnTextColor: CTTheme.of(context).white,
@@ -115,7 +115,7 @@ class CTButtonRedBlack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeData = CTTheme.of(context);
-    return _NewButtonBuilder(
+    return _ButtonBuilder(
       label: this.label,
       btnPrimaryColor: themeData.reddish,
       btnTextColor: CTTheme.of(context).black,
@@ -142,7 +142,7 @@ class CTButtonWarmRedWhite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeData = CTTheme.of(context);
-    return _NewButtonBuilder(
+    return _ButtonBuilder(
       label: this.label,
       btnPrimaryColor: themeData.warmRed,
       btnTextColor: CTTheme.of(context).white,
@@ -169,7 +169,7 @@ class CTButtonWarmRedBlack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeData = CTTheme.of(context);
-    return _NewButtonBuilder(
+    return _ButtonBuilder(
       label: this.label,
       btnPrimaryColor: themeData.warmRed,
       btnTextColor: CTTheme.of(context).black,
@@ -196,7 +196,7 @@ class CTButtonBlackWhite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeData = CTTheme.of(context);
-    return _NewButtonBuilder(
+    return _ButtonBuilder(
       label: this.label,
       btnPrimaryColor: themeData.black,
       btnTextColor: CTTheme.of(context).white,
@@ -223,7 +223,7 @@ class CTButtonLimeGreenBlack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeData = CTTheme.of(context);
-    return _NewButtonBuilder(
+    return _ButtonBuilder(
       label: this.label,
       btnPrimaryColor: themeData.limeGreenish,
       btnTextColor: CTTheme.of(context).black,
@@ -250,7 +250,7 @@ class CTButtonLimeGreenWhite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeData = CTTheme.of(context);
-    return _NewButtonBuilder(
+    return _ButtonBuilder(
       label: this.label,
       btnPrimaryColor: themeData.limeGreenish,
       btnTextColor: CTTheme.of(context).white,
