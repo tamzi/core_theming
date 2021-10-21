@@ -17,14 +17,14 @@ class AboutCoreTheming extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: CTThemeColors.lightGray,
+        backgroundColor: CTThemeColors.lightGrey,
         appBar: AppBar(
           title: CTAppBarHeader(
             'about core theming',
           ),
           centerTitle: true,
           elevation: 7,
-          backgroundColor: CTThemeColors.deepGray,
+          backgroundColor: CTThemeColors.deepGrey,
           iconTheme: IconThemeData(color: CTThemeColors.black),
         ),
         body: SafeArea(

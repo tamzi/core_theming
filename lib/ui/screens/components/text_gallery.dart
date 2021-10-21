@@ -10,12 +10,12 @@ class TextsGallery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: CTThemeColors.lightGray,
+        backgroundColor: CTThemeColors.lightGrey,
         appBar: AppBar(
           title: CTAppBarHeader('Text Items'),
           centerTitle: true,
           elevation: 3,
-          backgroundColor: CTThemeColors.deepGray,
+          backgroundColor: CTThemeColors.deepGrey,
           iconTheme: IconThemeData(color:CTThemeColors.black),
         ),
         body: SafeArea(
