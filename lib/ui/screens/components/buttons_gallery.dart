@@ -18,7 +18,7 @@ class ButtonsGallery extends StatelessWidget {
           title: CTAppBarHeader('Buttons'),
           centerTitle: true,
           elevation: 3,
-          backgroundColor: CTThemeColors.deepGray,
+          backgroundColor: CTThemeColors.deepGrey,
           iconTheme: IconThemeData(color:CTThemeColors.black),
         ),
         body: SafeArea(

@@ -14,10 +14,10 @@ const CTThemeData _default = CTThemeData(
   limeGreenish: CTThemeColors.limeGreenish,
   white: CTThemeColors.white,
   black: CTThemeColors.black,
-  gray: CTThemeColors.gray,
-  deepGray: CTThemeColors.deepGray,
-  darkGray: CTThemeColors.lightGray,
-  lightGray: CTThemeColors.lightGray,
+  gray: CTThemeColors.grey,
+  deepGray: CTThemeColors.deepGrey,
+  darkGray: CTThemeColors.lightGrey,
+  lightGray: CTThemeColors.lightGrey,
   buttonRed: CTThemeColors.buttonRed,
 
   /// All Text Fields
@@ -34,7 +34,7 @@ const CTThemeData _default = CTThemeData(
       letterSpacing: 0.3,
       fontFamily: 'Gilroy',
       fontWeight: FontWeight.w700,
-      color: CTThemeColors.darkGray),
+      color: CTThemeColors.darkGrey),
 
   header: TextStyle(
       fontSize: 37.0,
@@ -56,7 +56,7 @@ const CTThemeData _default = CTThemeData(
       letterSpacing: -0.3,
       fontFamily: 'Gilroy',
       fontWeight: FontWeight.normal,
-      color: CTThemeColors.darkGray),
+      color: CTThemeColors.darkGrey),
   descriptionText: TextStyle(
       fontSize: 17.0,
       height: 1.3,

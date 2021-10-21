@@ -17,7 +17,7 @@ class ListTilesGallery extends StatelessWidget {
           title: CTAppBarHeader('List Tiles'),
           centerTitle: true,
           elevation: 3,
-          backgroundColor: CTThemeColors.deepGray,
+          backgroundColor: CTThemeColors.deepGrey,
         ),
         body: SafeArea(
           child: Container(
