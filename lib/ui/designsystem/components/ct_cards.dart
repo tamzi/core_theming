@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:core_theming/ui/designsystem/atoms/ct_colour.dart';
 import 'package:core_theming/ui/designsystem/utils/scale.dart' as scale;
 
+import '../theme.dart';
+
 /*
 
 Due to uniqueness of cards, we will construct each card
@@ -98,6 +100,153 @@ class CTContentCard extends StatelessWidget {
                 Spacer(flex: 10,),
                 CTBodyText(cardBodyText)
           ]),
+        ),
+      ),
+    );
+  }
+}
+
+class CardInfo extends StatelessWidget {
+  final double leftPadding = scale.value(24.0);
+  final double topPadding = scale.value(24.0);
+  final double rightPadding = scale.value(24.0);
+  final double bottomPadding = scale.value(16.0);
+
+  final double containerWidth = scale.value(327.0);
+  final double cardWidth = scale.value(327.0);
+  final double cardHeight = scale.value(152);
+  final double cardContainerInset = scale.value(16.0);
+  final double iconSize = scale.value(30);
+
+  final double leftCardPadding = scale.value(10.0);
+  final double topCardPadding = scale.value(8.0);
+  final double rightCardPadding = scale.value(8.0);
+  final double bottomCardPadding = scale.value(10.0);
+
+  final double elevation = scale.value(1.0);
+  final double messageTextSize = scale.value(14.0);
+
+  final String messageText;
+
+  CardInfo({
+    required Key key,
+    required this.messageText,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.fromLTRB(
+          leftPadding, topPadding, rightPadding, bottomPadding),
+      child: Container(
+       width: double.infinity,
+        child: Card(
+          color: CTThemeColors.lightGrey,
+          elevation: elevation,
+          child: Container(
+            width: cardWidth,
+            margin: EdgeInsets.fromLTRB(leftCardPadding, topCardPadding,
+                rightCardPadding, bottomCardPadding),
+            child: Row(
+              children: <Widget>[
+                ListTile(
+                  leading: Icon(
+                    Icons.error_outline,
+                    color: CTThemeColors.black,
+                    size: iconSize,
+                  ),
+                  title: Text(
+                    messageText,
+                    style: TextStyle(
+                        color: CTTheme.of(context).black,
+                        fontSize: messageTextSize),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class CardInfoAction extends StatelessWidget {
+  final double leftPadding = scale.value(24.0);
+  final double topPadding = scale.value(24.0);
+  final double rightPadding = scale.value(24.0);
+  final double bottomPadding = scale.value(16.0);
+
+  final double containerWidth = scale.value(327.0);
+  final double cardWidth = scale.value(327.0);
+  final double cardHeight = scale.value(152);
+  final double cardContainerInset = scale.value(6.0);
+
+  final double elevation = scale.value(8.0);
+  final double messageTextSize = scale.value(14.0);
+  final double messageActionButtonFontSize = scale.value(16.0);
+
+  final String messageText;
+  final String leftFlatButton;
+  final String rightFlatButton;
+
+  CardInfoAction({
+    required Key key,
+    required this.leftFlatButton,
+    required this.rightFlatButton,
+    required this.messageText,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.fromLTRB(
+          leftPadding, topPadding, rightPadding, bottomPadding),
+      child: Container(
+        width: containerWidth,
+        child: Card(
+          color: CTThemeColors.white,
+          elevation: elevation,
+          child: Container(
+            width: cardWidth,
+
+            ///margin: const EdgeInsets.all(10.0),
+            child: Column(
+              children: <Widget>[
+                ListTile(
+                  leading: Image.asset('assets/img/grey_box.png'),
+                  title: Text(
+                    messageText,
+                    style: TextStyle(
+                        color: CTTheme.of(context).black,
+                        fontSize: messageTextSize),
+                  ),
+                ),
+                ButtonBar(
+                  children: <Widget>[
+                    FlatButton(
+                      onPressed: () {},
+                      child: Text(
+                        leftFlatButton,
+                        style: TextStyle(
+                            color: CTTheme.of(context).black,
+                            fontSize: messageActionButtonFontSize),
+                      ),
+                    ),
+                    FlatButton(
+                      onPressed: () {},
+                      child: Text(
+                        rightFlatButton,
+                        style: TextStyle(
+                            color: CTTheme.of(context).black,
+                            fontSize: messageActionButtonFontSize),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
