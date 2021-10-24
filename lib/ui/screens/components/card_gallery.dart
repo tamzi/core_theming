@@ -1,5 +1,6 @@
 import 'package:core_theming/ui/designsystem/atoms/ct_colour.dart';
 import 'package:core_theming/ui/designsystem/atoms/ct_texts.dart';
+import 'package:core_theming/ui/designsystem/components/ct_buttons.dart';
 import 'package:core_theming/ui/designsystem/components/ct_cards.dart';
 import 'package:core_theming/ui/designsystem/utils/scale.dart' as scale;
 import 'package:flutter/cupertino.dart';
@@ -25,10 +26,23 @@ class CardGallery extends StatelessWidget {
             padding: EdgeInsets.all(edgeInsets20),
             child: SingleChildScrollView(
               child: Column(children: <Widget>[
-                CTContentCard(
-                  key: ValueKey(1),
-                  cardTitle: 'card Title',
-                  cardBodyText: 'Card Body Text',
+                Container(
+                  width: double.infinity,
+                  child: CardInfo(
+                    messageText: 'This is a message',
+                    key: UniqueKey(),
+
+                  ),
+
+                ),
+                Container(
+                  width: double.infinity,
+                  child: CTButtonBlackWhite(
+                    label: 'Button BlackWhite',
+                    onPressed: () {
+                      print('You tapped on Button BlackWhite');
+                    },
+                  ),
                 ),
 
 
@@ -39,6 +53,7 @@ class CardGallery extends StatelessWidget {
   }
 }
 
+/*
 class JFCard extends StatelessWidget {
   final double edgeInsets17 = scale.value(17.0);
   final double edgeInsets23 = scale.value(23.0);
@@ -82,3 +97,4 @@ class JFCard extends StatelessWidget {
   }
 }
 
+*/
